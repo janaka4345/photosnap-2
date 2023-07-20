@@ -107,11 +107,10 @@ export default function Design() {
           className="col-start-1 col-end-13 row-span-1 lg:mt-0  lg:col-start-6 lg:col-end-13 lg:flex"
         >
           <Image
-            priority
             quality={100}
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="(min-width: 768px) 50vw, 100vw"
             src="/assets/designed-for-everyone.jpg"
             className="w-full h-full object-cover object-top"
             alt="photosnap logo"

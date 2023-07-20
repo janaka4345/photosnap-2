@@ -22,9 +22,9 @@ export default function Details() {
         </svg>
 
         <div className="p-5 ">
-          <h5 className="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
+          <h1 className="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
             100% Responsive
-          </h5>
+          </h1>
 
           <p className="mb-3 font-normal text-gray-700 text-center dark:text-gray-400">
             No matter which the device you’re on, our site is fully responsive
@@ -55,9 +55,9 @@ export default function Details() {
         </svg>
 
         <div className="p-5 ">
-          <h5 className="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
+          <h1 className="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
             No Photo Upload Limit
-          </h5>
+          </h1>
 
           <p className="mb-3 font-normal text-gray-700 text-center dark:text-gray-400">
             Our tool has no limits on uploads or bandwidth. Freely upload in
@@ -89,9 +89,9 @@ export default function Details() {
         </svg>
 
         <div className="p-5 ">
-          <h5 className="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
+          <h1 className="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
             Available to Embed
-          </h5>
+          </h1>
 
           <p className="mb-3 font-normal text-gray-700 text-center dark:text-gray-400">
             Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube

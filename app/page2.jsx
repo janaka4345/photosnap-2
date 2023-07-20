@@ -38,7 +38,7 @@
   </div>
 
   <Image
-    // priority
+    //
     quality={100}
     loading="lazy"
     width={0}

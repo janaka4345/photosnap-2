@@ -111,11 +111,11 @@ export default function Hero() {
           }}
         >
           <Image
-            priority
+            
             quality={100}
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="(min-width: 768px) 50vw, 100vw"
             src="/assets/create-and-share.jpg"
             className="w-full h-full object-cover object-center"
             alt="photosnap logo"

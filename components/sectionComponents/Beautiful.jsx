@@ -1,5 +1,5 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
 
@@ -9,13 +9,19 @@ export default function Beautiful() {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
+
+  const spring = useSpring(scrollYProgress, {
+    stiffness: 60,
+    damping: 20,
+  });
+
   let rightPane = useTransform(
-    scrollYProgress,
+    spring,
     [0, 0.2, 0.5, 0.8, 1],
     ["70%", "50%", "0%", "50%", "70%"]
   );
   let leftPane = useTransform(
-    scrollYProgress,
+    spring,
     [0, 0.2, 0.5, 0.8, 1],
     ["-70%", "-50%", "0%", "-50%", "-70%"]
   );
@@ -31,11 +37,10 @@ export default function Beautiful() {
           className="col-start-1 col-end-13 row-span-1 lg:mt-0  lg:col-start-1 lg:col-end-7 "
         >
           <Image
-            priority
             quality={100}
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="(min-width: 768px) 50vw, 100vw"
             src="/assets/beautiful-stories.jpg"
             className="w-full h-full object-cover object-center"
             alt="photosnap logo"

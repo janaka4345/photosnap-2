@@ -4,12 +4,12 @@ import React from "react";
 
 export default function Card({ title, by, src }) {
   return (
-    <div className="relative  lg:min-w-1/4 min-w-[90%] md:min-w-[350px] md:max-w-[350px] h-[70dvh] cursor-grab   mx-auto group-hover:scale-110 group hover:-translate-y-5   rounded-lg dark:bg-gray-800 ">
+    <div className="relative  lg:min-w-[25%] min-w-[90%] md:min-w-[350px] md:max-w-[350px] h-[70dvh] cursor-grab   mx-auto group-hover:scale-110 group hover:-translate-y-5   rounded-lg dark:bg-gray-800 ">
       <Image
         width={0}
         height={0}
-        sizes="100vw"
-        className=" w-full h-full rounded-t-lg object-cover object-center "
+        sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 90vw"
+        className=" w-full h-full rounded-t-lg rounded-b-lg hover:rounded-b-none object-cover object-center "
         src={src}
         alt=""
       />

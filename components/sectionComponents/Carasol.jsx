@@ -1,16 +1,28 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import Card from "../custom/Card";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 export default function Carasol() {
   const [width, setWidth] = useState(0);
+  const carasol = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: carasol,
+    offset: ["start end", "end start"],
+  });
+
+  // const spring = useSpring(scrollYProgress, {
+  //   stiffness: 60,
+  //   damping: 10,
+  // });
+
+  let x = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
 
   useEffect(() => {
     setWidth(carasol.current.scrollWidth - carasol.current.offsetWidth);
   }, []);
 
-  const carasol = useRef();
   return (
     <>
       <motion.section
@@ -21,6 +33,7 @@ export default function Carasol() {
       >
         <motion.div
           drag="x"
+          style={{ x }}
           dragConstraints={{ right: 0, left: -width }}
           className="flex w-fit gap-4 p-5"
         >
