@@ -1,6 +1,5 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Type } from "lucide-react";
 import Image from "next/image";
 import React, { useRef } from "react";
 
@@ -111,7 +110,7 @@ export default function Hero() {
           }}
         >
           <Image
-            
+            priority
             quality={100}
             width={0}
             height={0}
